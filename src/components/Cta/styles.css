@@ -1,0 +1,105 @@
+#cta-container {
+    --horizontal-padding: 2.5%;
+
+    background-color: rgb(102, 209, 158);
+    height: calc(100vh - 5rem);
+    padding-right: var(--horizontal-padding);
+    padding-left: var(--horizontal-padding);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#cta-content {
+    --input-container-height: 3rem;
+
+    display: flex;
+    flex-direction: column;
+
+    text-align: center;
+} 
+
+#cta-content h2 {
+    margin: 0;
+    color: var(--text-primary);
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+#cta-content > div {
+    --input-height: 1.5rem;
+    --input-line-height: 1.5rem;
+
+    background-color: white;
+    height: var(--input-container-height);
+    padding: 0.75rem 0.75rem; /* in large screen use 0.75rem 1rem */
+    margin-bottom: 0.5rem;
+    position: relative;
+
+    display: flex;
+    align-items: center;
+}
+
+#cta-content > div:focus-within::after {
+    /* later should add a transition to ease it */
+    width: 100%;
+    height: 2px;
+    content: "";
+    background: black;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+#cta-content img {
+    width: var(--input-height);
+    height: var(--input-height);
+}
+
+#cta-content input {
+    border: none;
+    outline: none;
+
+    margin-left: 0.5rem;
+
+    height: var(--input-height);
+    line-height: var(--input-line-height);
+
+    flex-grow: 1;
+}
+
+#cta-content input::placeholder {
+    color: rgb(127, 127, 127);
+}
+
+#cta-content button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 0;
+    font-weight: 500;
+}
+
+.clear-button {
+    background-color: inherit;
+    color: rgb(117, 117, 117);
+
+    height: var(--input-height);
+    line-height: var(--input-line-height);
+}
+
+.cta-button {
+    height: var(--input-container-height);
+
+    color: white;
+    background-color: black;
+
+    letter-spacing: 0.05rem;
+    font-size: 1.2rem;
+}
+
+.cta-button:hover { 
+    background-color: rgb(26, 26, 26); 
+}
