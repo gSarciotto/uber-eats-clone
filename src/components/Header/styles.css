@@ -1,0 +1,20 @@
+#header {
+    background-color: var(--background-primary);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 5rem;
+    max-width: 1920px;
+}
+
+#header a {
+    text-decoration: none;
+    color: var(--text-primary);
+    font-size: var(--text-sm); 
+    padding: 1rem;
+    font-weight: 500;
+}
+
+#sign-in {
+    background-color: var(--background-button);
+}
