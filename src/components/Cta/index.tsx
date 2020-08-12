@@ -3,9 +3,10 @@ import React, { useState } from "react";
 import "./styles.css";
 
 import locationSvg from "../../assets/icons/location.svg";
+import cta1 from "../../assets/images/cta-background-1.svg";
+import cta2 from "../../assets/images/cta-background-2.svg";
 
 const Cta: React.FC = () => {
-    // add clear button when something is written on the input
     // later maybe add the cta images but rotate them in small screens so they be on top and bottom
     const [inputText, setInputText] = useState("");
 
@@ -26,6 +27,13 @@ const Cta: React.FC = () => {
 
     return (
         <div id="cta-container">
+            <div className="cta-images-container">
+                <img
+                    src={cta2}
+                    alt="Food ilustration"
+                    className="cta-top-img"
+                />
+            </div>
             <main id="cta-content">
                 <h2>Your favorite food, delivered with Uber</h2>
                 <div>
@@ -50,6 +58,13 @@ const Cta: React.FC = () => {
                     Find Food
                 </button>
             </main>
+            <div className="cta-images-container">
+                <img
+                    src={cta1}
+                    alt="Food ilustration"
+                    className="cta-bottom-img"
+                />
+            </div>
         </div>
     );
 };

@@ -1,14 +1,30 @@
 #cta-container {
     --horizontal-padding: 2.5%;
+    --cta-container-height: calc(100vh - 5rem);
 
     background-color: rgb(102, 209, 158);
-    height: calc(100vh - 5rem);
-    padding-right: var(--horizontal-padding);
-    padding-left: var(--horizontal-padding);
+    height: var(--cta-container-height);
 
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between; 
+}
+
+.cta-images-container {
+    height: 9rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-top-img {
+    position: absolute;
+    bottom: 0;
+    transform: rotate(-90deg);
+}
+
+.cta-bottom-img {
+    position: absolute;
+    bottom: 0;
 }
 
 #cta-content {
@@ -30,6 +46,7 @@
 #cta-content > div {
     --input-height: 1.5rem;
     --input-line-height: 1.5rem;
+    --input-placeholder-color: rgb(117, 117, 117);
 
     background-color: white;
     height: var(--input-container-height);
@@ -71,7 +88,7 @@
 }
 
 #cta-content input::placeholder {
-    color: rgb(127, 127, 127);
+    color: var(--input-placeholder-color);
 }
 
 #cta-content button {
@@ -84,7 +101,7 @@
 
 .clear-button {
     background-color: inherit;
-    color: rgb(117, 117, 117);
+    color: var(--input-placeholder-color);
 
     height: var(--input-height);
     line-height: var(--input-line-height);
