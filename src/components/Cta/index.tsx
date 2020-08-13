@@ -7,7 +7,7 @@ import cta1 from "../../assets/images/cta-background-1.svg";
 import cta2 from "../../assets/images/cta-background-2.svg";
 
 const Cta: React.FC = () => {
-    // later maybe add the cta images but rotate them in small screens so they be on top and bottom
+    // TODO: clean/refactor the css and adjust image sizes in mobile
     const [inputText, setInputText] = useState("");
 
     const inputRef = React.createRef<HTMLInputElement>(); // this is to focus the input when the clear button is triggered.
@@ -27,12 +27,8 @@ const Cta: React.FC = () => {
 
     return (
         <div id="cta-container">
-            <div className="cta-images-container">
-                <img
-                    src={cta2}
-                    alt="Food ilustration"
-                    className="cta-top-img"
-                />
+            <div className="cta-images-container cta-img2-container">
+                <img src={cta2} alt="Food ilustration" className="cta-img2" />
             </div>
             <main id="cta-content">
                 <h2>Your favorite food, delivered with Uber</h2>
@@ -58,12 +54,8 @@ const Cta: React.FC = () => {
                     Find Food
                 </button>
             </main>
-            <div className="cta-images-container">
-                <img
-                    src={cta1}
-                    alt="Food ilustration"
-                    className="cta-bottom-img"
-                />
+            <div className="cta-images-container cta-img1-container">
+                <img src={cta1} alt="Food ilustration" className="cta-img1" />
             </div>
         </div>
     );
