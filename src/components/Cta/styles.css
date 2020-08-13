@@ -11,20 +11,20 @@
 }
 
 .cta-images-container {
-    height: 9rem;
+    height: 10rem;
     position: relative;
     overflow: hidden;
 }
 
-.cta-top-img {
+.cta-img2 {
     position: absolute;
-    bottom: 0;
+    bottom: 30px;
     transform: rotate(-90deg);
 }
 
-.cta-bottom-img {
+.cta-img1 {
     position: absolute;
-    bottom: 0;
+    bottom: -40px;
 }
 
 #cta-content {
@@ -50,7 +50,7 @@
 
     background-color: white;
     height: var(--input-container-height);
-    padding: 0.75rem 0.75rem; /* in large screen use 0.75rem 1rem */
+    padding: 0.75rem 0.75rem; 
     margin-bottom: 0.5rem;
     position: relative;
 
