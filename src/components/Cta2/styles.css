@@ -1,0 +1,55 @@
+.cta2 {
+    padding-left: var(--global-padding);
+    padding-right: var(--global-padding);
+    margin-top: 40px;
+    
+    cursor: pointer;
+
+    padding-bottom: 16px;
+    border-bottom: 1px solid rgb(226, 226, 226);
+
+    display: flex;
+    flex-direction: column;
+}
+
+.cta2 > div {
+    margin-bottom: 24px;
+}
+
+.cta2 svg {
+    width: 100%;
+}
+
+.cta2 h2 {
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+    margin-top: 12px;
+}
+
+.cta2 a {
+    text-decoration: none;
+    color: var(--text-green);
+    font-weight: 500;
+}
+
+@media(min-width: 768px) {
+    .cta2 {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .cta2 h2 {
+        font-size: 1.75rem;
+    }
+
+    .cta2 > div{
+        width: 45%;
+    }
+}
+
+@media(min-width: 992px) {
+    .cta2 > div {
+        width: 30%;
+    }
+}
