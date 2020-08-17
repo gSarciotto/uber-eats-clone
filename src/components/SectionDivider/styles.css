@@ -1,0 +1,6 @@
+.section-divider {
+    margin: 40px 0;
+    height: 1px;
+    background-color: var(--divider-color);
+    border: 0px solid var(--divider-color);
+}

@@ -5,6 +5,7 @@ import Cta from "./components/Cta";
 //import FoodList from "./components/FoodList";
 import Cta2 from "./components/Cta2";
 import TextList from "./components/TextList";
+import SectionDivider from "./components/SectionDivider";
 
 function App(): JSX.Element {
     const cities: string[] = [
@@ -68,13 +69,15 @@ function App(): JSX.Element {
             {
                 //<FoodList title="Food Delivery in San Francisco Bay Area" />
             }
+            <SectionDivider />
             <Cta2 />
+            <SectionDivider />
             <TextList
                 title="Cities Near Me"
                 additionalText="View all 500+ cities"
                 textArray={cities}
             />
-
+            <SectionDivider />
             <TextList title="Countries with Uber Eats" textArray={countries} />
         </div>
     );
