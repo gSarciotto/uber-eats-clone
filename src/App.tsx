@@ -6,6 +6,7 @@ import Cta from "./components/Cta";
 import Cta2 from "./components/Cta2";
 import TextList from "./components/TextList";
 import SectionDivider from "./components/SectionDivider";
+import Footer from "./components/Footer";
 
 function App(): JSX.Element {
     const cities: string[] = [
@@ -79,6 +80,7 @@ function App(): JSX.Element {
             />
             <SectionDivider />
             <TextList title="Countries with Uber Eats" textArray={countries} />
+            <Footer />
         </div>
     );
 }
