@@ -2,6 +2,7 @@
     --text-primary: #000000;
     --background-primary: #FFFFFF;
     --background-button: rgb(240, 240, 240);
+    --divider-color: rgb(226, 226, 226);
 
     --text-green: rgb(5, 163, 87);
 
@@ -13,6 +14,7 @@
 
     /*font sizes*/
     --text-sm: 0.875rem;
+    --section-title-font-size: 2.25rem;
 
     /*font weight*/
     --text-bold: 700;
@@ -37,4 +39,11 @@ body {
     sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+
+.section-divider {
+    margin: 40px 0;
+    height: 1px;
+    background-color: var(--divider-color);
+    border: 0px solid var(--divider-color);
 }
