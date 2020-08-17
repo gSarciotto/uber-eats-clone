@@ -1,6 +1,7 @@
 .text-list-section {
     padding-left: var(--global-padding);
     padding-right: var(--global-padding);
+    padding-bottom: 40px;
 }
 
 .text-list-section a {

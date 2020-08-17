@@ -11,7 +11,6 @@ interface TextListProps {
 const TextList: React.FC<TextListProps> = (props: TextListProps) => {
     return (
         <section className="text-list-section">
-            <hr className="section-divider" />
             <div>
                 <h2>{props.title}</h2>
                 {props.additionalText && (
