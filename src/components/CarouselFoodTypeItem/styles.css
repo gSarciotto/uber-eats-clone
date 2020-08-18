@@ -1,0 +1,19 @@
+.carousel-food-type-item {
+    --item-width: calc(50vw - 1.5rem - var(--global-padding));
+    max-width: 260px !important;
+    flex-basis: calc(50vw - 1.5rem - var(--global-padding)) !important;
+
+    max-height: 260px;
+}
+
+@media(min-width: 768px) {
+    .carousel-food-type-item {
+        flex-basis: calc(25vw -1.5rem - var(--global-padding)) !important;
+    }
+}
+
+@media(min-width: 1200px) {
+    .carousel-food-type-item {
+        flex-basis: calc(16,666vw - 1.5rem - var(--global-padding)) !important;
+    }
+}

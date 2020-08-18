@@ -1,0 +1,23 @@
+.carousel-item {
+    --right-side-margin: 1.5rem;
+    flex-grow: 0;
+    flex-shrink: 0;
+    max-width: 552px;
+    flex-basis: calc(100vw - var(--right-side-margin) - var(--global-padding));
+    min-width: 330px;
+    margin: 0 1.5rem 0 0;
+
+    scroll-snap-align: start;
+}
+
+@media(min-width: 768px){
+    .carousel-item {
+        flex-basis: calc(50vw - var(--right-side-margin) - var(--global-padding));
+    }
+}
+
+@media(min-width: 1200px){
+    .carousel-item {
+        flex-basis: calc(33.333vw - var(--right-side-margin) - var(--global-padding));
+    }
+}

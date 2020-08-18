@@ -1,0 +1,87 @@
+.food-list-item-container {
+    width: 100%;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    cursor: pointer;
+}
+
+.food-list-item-container > div {
+    width: 100%;
+
+    color: black;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    border-bottom: 1px;
+}
+
+.food-list-item-container img {
+    height: 240px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.food-list-item-container > div > div {
+    width: 60%;
+
+    margin: 16px 0 12px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.food-list-item-container a {
+    text-decoration: none;
+    color: inherit;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+
+    width: 100%;
+
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+.food-list-item-container span {
+    margin-top: 8px;
+    font-size: 0.9rem;
+    font-weight: 300;
+    white-space: nowrap;
+    color: inherit;
+}
+
+#food-list-item-ratings {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: rgb(230, 242, 237);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.food-list-item-highlight-ratings {
+    color: rgb(5, 163, 87);
+}
+
+.food-list-item-container p {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    color: rgb(84, 84, 84);
+    font-size: 0.75rem;
+
+    width: 100%;
+
+    margin: 0;
+    padding-top: 8px;
+    border-top: 1px solid rgb(226, 226, 226);
+}

@@ -1,0 +1,25 @@
+.carousel {
+    --viewport-modifier: 1;
+
+    list-style: none;
+    padding: 0;
+    width: 100%;
+
+    display: flex;
+
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+}
+
+@media(min-width: 768px) {
+    .carousel {
+        --viewport-modifier: 2;
+    }
+}
+
+@media(min-width: 1200px){
+    .carousel {
+        --viewport-modifier: 3;
+    }
+}
