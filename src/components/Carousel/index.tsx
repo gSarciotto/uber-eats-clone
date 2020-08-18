@@ -13,7 +13,7 @@ interface CarouselProps {
     numberOfRightClicks: number;
     viewportModifier: number;
     refsArray: React.RefObject<CarouselItemType>[];
-    lastClickDirection: "left" | "right";
+    lastClickDirection: "left" | "right" | "none";
 }
 
 const Carousel = React.forwardRef<HTMLUListElement, CarouselProps>(
@@ -26,9 +26,11 @@ const Carousel = React.forwardRef<HTMLUListElement, CarouselProps>(
         } = props;
 
         useEffect(() => {
+            if (lastClickDirection === "none") return;
             let scrollToElementIndex = 0;
             const scrollIntoViewOptions: ScrollIntoViewOptions = {
-                behavior: "smooth"
+                behavior: "auto", //smooth option doesnt work on chrome for some reason. To overcome it, used the scroll-behavior: smooth on the .css
+                block: "center"
             };
             if (lastClickDirection === "right") {
                 scrollToElementIndex = calculateNewLastElementInView(
@@ -37,7 +39,7 @@ const Carousel = React.forwardRef<HTMLUListElement, CarouselProps>(
                     refsArray.length
                 );
                 // scroll to the end so that we can view all the elements in the current "page" and not only the first one
-                scrollIntoViewOptions.block = "end";
+                scrollIntoViewOptions.inline = "end";
             } else if (lastClickDirection === "left") {
                 scrollToElementIndex = calculateNewFirstElementInView(
                     numberOfRightClicks,
@@ -45,7 +47,7 @@ const Carousel = React.forwardRef<HTMLUListElement, CarouselProps>(
                     refsArray.length
                 );
                 // scroll to the start so that we can view all the elements in the current "page" and not only the last one
-                scrollIntoViewOptions.block = "start";
+                scrollIntoViewOptions.inline = "start";
             }
             const refOfScrollToElement = refsArray[scrollToElementIndex];
             if (refOfScrollToElement.current) {

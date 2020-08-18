@@ -23,8 +23,8 @@ const FoodList: React.FC<FoodListProps> = (props: FoodListProps) => {
     const [disabledLeft, setDisabledLeft] = useState(true);
     const [disabledRight, setDisabledRight] = useState(false); //we actually need to set the true initial state at an useEffect, since if we have less items than the viewportModifier, we should start with the right button disabled
     const [lastClickDirection, setLastClickDirection] = useState<
-        "left" | "right"
-    >("left");
+        "left" | "right" | "none"
+    >("none");
 
     const carouselRef = createRef<HTMLUListElement>();
 
@@ -69,7 +69,6 @@ const FoodList: React.FC<FoodListProps> = (props: FoodListProps) => {
 
     const handleRightClick = (): void => {
         // limit the number of right clicks so that when we get to the last element and click again we dont need to keep clicking left until it moves again
-        console.log(viewportModifier);
         if (
             calculateExpectedNewIndexOfLastElementInView(
                 numberOfRightClicks,
@@ -84,7 +83,6 @@ const FoodList: React.FC<FoodListProps> = (props: FoodListProps) => {
     };
 
     const handleLeftClick = (): void => {
-        console.log(numberOfRightClicks);
         if (numberOfRightClicks === 0) {
             return;
         }
@@ -122,41 +120,6 @@ const FoodList: React.FC<FoodListProps> = (props: FoodListProps) => {
             </Carousel>
         </section>
     );
-
-    /*return (
-        <section className="food-list">
-            <h2>{props.title}</h2>
-            <div>
-                <button
-                    className="carousel-arrow-button"
-                    onClick={handleLeftClick}
-                    disabled={disabledLeft}
-                >
-                    <LeftArrow aria-label="Move backwards" />
-                </button>
-                <button
-                    className="carousel-arrow-button"
-                    onClick={handleRightClick}
-                    disabled={disabledRight}
-                >
-                    <RightArrow aria-label="Move forwards" />
-                </button>
-            </div>
-            <Carousel
-                ref={carouselRef}
-                numberOfRightClicks={numberOfRightClicks}
-                viewportModifier={viewportModifier}
-                lastClickDirection={lastClickDirection}
-                refsArray={refsArray}
-            >
-                {refsArray.map((ref, index) => (
-                    <CarouselItem key={index} ref={ref}>
-                        <FoodListItemContent {...foodListData1[index]} />
-                    </CarouselItem>
-                ))}
-            </Carousel>
-        </section>
-    );*/
 };
 
 export default FoodList;
